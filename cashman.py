@@ -4,14 +4,17 @@ import locale
 import discord
 import time
 import uuid
-import pandas as pd
 import re
+import json
 #from dotenv import load_dotenv
 
 #Setup global variables here
 #load_dotenv()
+
+privateData = json.load(open('private'))
+
 client = discord.Client()
-TOKEN = 'NzI4MjkxNTI3MTA0NzkwNTI4.Xv4izw.KQndfQkN7NAFyIuYy-Ve81jbx1M'
+TOKEN = privateData['TOKEN']
 ChanTotal = 0
 totalFilePath = r'C:\Users\brand\source\repos\cashman\cashman\total'
 transFilePath = r'C:\Users\brand\source\repos\cashman\cashman\transactions'
